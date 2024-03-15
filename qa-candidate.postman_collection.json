@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "ea0f9842-0317-4793-8e55-970100d6bdc6",
+		"name": "qa-candidate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4067690"
+	},
+	"item": [
+		{
+			"name": "gerar-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clains\" : [\n       {\n          \"key\": \"teste\",\n          \"value\": \"teste\"\n       }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/gerar-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerar-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verificar-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzZXVJc3N1ZXIiLCJjbGFpbXMiOlsidGVzdGUiXSwiZXhwIjoxNzEwNTA3MzcyfQ.XlaeLWXNFqbJVFkSkYnwKhj4s6tiDr-4qutm0IjE0Zs\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/verificar-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verificar-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
